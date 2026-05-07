@@ -279,4 +279,4 @@ Azure Resource Deployment
 # 📝 Final Summary
 
 Module 3 focuses on administering Azure resources using **Infrastructure as Code (IaC)**. It teaches how to deploy and manage infrastructure using ARM templates and Bicep files, and how to modify them to maintain scalable, consistent, and automated cloud environments.
-```
+
