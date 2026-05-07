@@ -200,7 +200,7 @@ Example:
 ```bicep
 param location string = 'eastus'
 param storageName string
-``` id="bicep2"
+```
 
 ---
 
