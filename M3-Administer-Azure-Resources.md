@@ -56,7 +56,7 @@ An ARM template is a **JSON-based file** that defines Azure resources and their 
     }
   ]
 }
-``` id="armtpl1"
+```
 
 ---
 
