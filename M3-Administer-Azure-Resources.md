@@ -224,7 +224,7 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2023-01-01' = {
   }
   kind: 'StorageV2'
 }
-``` id="bicep3"
+```
 
 ---
 
@@ -246,7 +246,7 @@ Bicep File
 ARM Template (JSON)
    ↓
 Azure Resource Deployment
-``` id="flow1"
+```
 
 ---
 
