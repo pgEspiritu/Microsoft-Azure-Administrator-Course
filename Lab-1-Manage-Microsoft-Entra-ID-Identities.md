@@ -26,9 +26,13 @@
    - **Manage Tenants**
    - then click **+ Create**
 
+![Lab-1.1](images/Lab-1.1.png)
+
 2. On the **Basics** tab:
    - Select **Microsoft Entra ID**
    - Click **Next: Configuration**
+
+![Lab-1.2](images/Lab-1.2.png)
 
 ---
 
@@ -42,8 +46,12 @@ Configure the following fields:
 | Initial Domain Name | `firstaad61581520` |
 | Country/Region | `United States` |
 
+![Lab-1.3](images/Lab-1.3.png)
+
 1. Click **Review + Create**
 2. Click **Create**
+
+![Lab-1.4](images/Lab-1.4.png)
 
 ---
 
@@ -58,6 +66,8 @@ Configure the following fields:
 > **Note:**  
 > If the CAPTCHA form fails, the tenant may still be created.  
 > Check the **Manage Tenant** section before attempting to create the tenant again.
+
+![Lab-1.5](images/Lab-1.5.png)
 
 ---
 
@@ -155,6 +165,8 @@ You are tasked with:
    - then **New user**
    - select **Create new user**
 
+![Lab-1.7](images/Lab-1.7.png)
+
 2. Configure the following settings:
 
 | Setting | Value |
@@ -167,11 +179,17 @@ You are tasked with:
 | Department | `IT` |
 | Usage location | `United States` |
 
+![Lab-1.8](images/Lab-1.8.png)
+![Lab-1.9](images/Lab-1.9.png)
+![Lab-1.10](images/Lab-1.10.png)
+
 3. Select:
    - **Review + create**
    - then **Create**
 
 4. Refresh the page and confirm the user was created.
+
+![Lab-1.11](images/Lab-1.11.png)
 
 ---
 
@@ -179,6 +197,8 @@ You are tasked with:
 
 1. In the **New user** drop-down, select:
    - **Invite an external user**
+
+![Lab-1.12](images/Lab-1.12.png)
 
 2. Configure the following settings:
 
@@ -189,6 +209,8 @@ You are tasked with:
 | Send invite message | Checked |
 | Message | `Welcome to Azure and our group project` |
 
+![Lab-1.13](images/Lab-1.13.png)
+
 3. Open the **Properties** tab and configure:
 
 | Setting | Value |
@@ -197,11 +219,18 @@ You are tasked with:
 | Department | `IT` |
 | Usage location | `United States` |
 
+![Lab-1.14](images/Lab-1.14.png)
+![Lab-1.15](images/Lab-1.15.png)
+
 4. Select:
    - **Review + invite**
    - then **Invite**
 
+![Lab-1.16](images/Lab-1.16.png)
+
 5. Refresh the page and confirm the guest user was created.
+
+![Lab-1.17](images/Lab-1.17.png)
 
 > **Note:**  
 > The invitation email should arrive shortly.
@@ -218,6 +247,8 @@ You are tasked with:
 2. In the **Manage** blade, select:
    - **Groups**
 
+![Lab-1.18](images/Lab-1.18.png)
+
 3. Review available group configuration settings.
 
 ---
@@ -226,6 +257,8 @@ You are tasked with:
 
 1. In the **All groups** blade, select:
    - **+ New group**
+
+![Lab-1.20](images/Lab-1.20.png)
 
 2. Configure the following settings:
 
@@ -246,7 +279,11 @@ You are tasked with:
 1. Select:
    - **No owners selected**
 
+![Lab-1.21](images/Lab-1.21.png)
+
 2. Search for and select your account as the owner.
+
+![Lab-1.22](images/Lab-1.22.png)
 
 3. Confirm the selection.
 
@@ -257,9 +294,13 @@ You are tasked with:
 1. Select:
    - **No members selected**
 
+![Lab-1.23](images/Lab-1.23.png)
+
 2. Add the following users:
    - `az104-user1`
    - The invited guest user
+
+![Lab-1.24](images/Lab-1.24.png)
 
 3. Confirm the member selections.
 
@@ -270,11 +311,17 @@ You are tasked with:
 1. Select:
    - **Create**
 
+![Lab-1.26](images/Lab-1.26.png)
+
 2. Refresh the page and verify the group was created successfully.
+
+![Lab-1.27](images/Lab-1.27.png)
 
 3. Open the newly created group and review:
    - Members
    - Owners
+
+![Lab-1.28](images/Lab-1.28.png)
 
 ---
 
