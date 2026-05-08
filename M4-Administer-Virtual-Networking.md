@@ -227,7 +227,7 @@ DNS (Domain Name System) translates domain names into IP addresses.
 
 ```text
 www.contoso.com → 20.45.10.5
-``` id="dns1"
+```
 
 ---
 
