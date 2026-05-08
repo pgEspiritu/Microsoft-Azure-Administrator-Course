@@ -46,7 +46,7 @@ A Virtual Network (VNet) is a private network in Azure that allows Azure resourc
 | Component | Description |
 |---|---|
 | Address Space | IP address range for the VNet |
-| Subnet | Smaller network segment داخل the VNet |
+| Subnet | Smaller network segment the VNet |
 | Network Interface | Connects resources to the network |
 | Route Tables | Controls traffic routing |
 
@@ -59,7 +59,7 @@ Virtual Network: 10.0.0.0/16
    ├── Subnet A: 10.0.1.0/24
    ├── Subnet B: 10.0.2.0/24
    └── Subnet C: 10.0.3.0/24
-``` id="vnet1"
+``` 
 
 ---
 
