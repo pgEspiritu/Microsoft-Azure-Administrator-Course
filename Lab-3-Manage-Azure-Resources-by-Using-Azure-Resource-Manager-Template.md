@@ -56,6 +56,8 @@ Your organization wants to:
 2. Select:
    - **Create**
 
+![Lab-4.1](images/Lab-4.1.png)
+
 3. Configure the following settings:
 
 | Setting | Value |
@@ -69,12 +71,17 @@ Your organization wants to:
 | Performance | `Standard HDD` |
 | Size | `32 GiB` |
 
+![Lab-4.2](images/Lab-4.2.png)
+![Lab-4.3](images/Lab-4.3.png)
+
 > 💡 **Note:**  
 > Managed disks are block-level storage volumes managed by Azure.
 
 4. Select:
    - **Review + Create**
    - then **Create**
+
+![Lab-4.4](images/Lab-4.4.png)
 
 ---
 
@@ -86,6 +93,8 @@ Your organization wants to:
 2. In the **Automation** blade, select:
    - **Export template**
 
+![Lab-4.5](images/Lab-4.5.png)
+
 3. Review:
    - Template file
    - Parameters file
@@ -94,7 +103,12 @@ Your organization wants to:
    - `template.json`
    - `parameters.json`
 
+![Lab-4.6](images/Lab-4.6.png)
+![Lab-4.7](images/Lab-4.7.png)
+
 5. Verify both files exist in your local **Downloads** folder.
+
+![Lab-4.8](images/Lab-4.8.png)
 
 ---
 
@@ -108,6 +122,8 @@ Your organization wants to:
 2. Select:
    - **Build your own template in the editor**
 
+![Lab-4.9](images/Lab-4.9.png)
+
 ---
 
 ## 📂 Step 2: Upload and Modify the Template
@@ -115,8 +131,12 @@ Your organization wants to:
 1. Select:
    - **Load file**
 
+![Lab-4.10](images/Lab-4.10.png)
+
 2. Upload:
    - `template.json`
+
+![Lab-4.11](images/Lab-4.11.png)
 
 3. Modify the template:
 
@@ -128,6 +148,9 @@ Your organization wants to:
 4. Select:
    - **Save**
 
+![Lab-4.12](images/Lab-4.12.png)
+![Lab-4.13](images/Lab-4.13.png)
+
 ---
 
 ## ⚙️ Step 3: Upload and Modify Parameters
@@ -135,14 +158,21 @@ Your organization wants to:
 1. Select:
    - **Edit parameters**
 
+![Lab-4.14](images/Lab-4.14.png)
+
 2. Upload:
    - `parameters.json`
+
+![Lab-4.15](images/Lab-4.15.png)
+![Lab-4.16](images/Lab-4.16.png)
 
 3. Modify the parameter:
 
 | Original | New Value |
 |---|---|
 | `disks_az104_disk1_name` | `disk_name` |
+
+![Lab-4.17](images/Lab-4.17.png)
 
 4. Select:
    - **Save**
@@ -160,9 +190,13 @@ Configure the following settings:
 | Region | `(US) East US` |
 | Disk_name | `az104-disk2` |
 
+![Lab-4.18](images/Lab-4.18.png)
+
 1. Select:
    - **Review + Create**
    - then **Create**
+
+![Lab-4.19](images/Lab-4.19.png)
 
 2. Verify:
    - `az104-disk2` was created successfully
@@ -173,6 +207,8 @@ Configure the following settings:
 4. Confirm both disks exist:
    - `az104-disk1`
    - `az104-disk2`
+
+![Lab-4.20](images/Lab-4.20.png)
 
 ---
 
@@ -185,6 +221,8 @@ Configure the following settings:
    - Inputs
    - Template
 
+![Lab-4.21](images/Lab-4.21.png)
+
 > 💡 **Note:**  
 > Azure stores deployment history for troubleshooting and auditing.
 
@@ -196,8 +234,12 @@ Configure the following settings:
 
 1. Select the **Cloud Shell** icon in the Azure Portal.
 
+![Lab-4.22](images/Lab-4.22.png)
+
 2. Choose:
    - **PowerShell**
+
+![Lab-4.23](images/Lab-4.23.png)
 
 ---
 
@@ -205,6 +247,9 @@ Configure the following settings:
 
 1. Select:
    - **Mount storage account**
+
+![Lab-4.24](images/Lab-4.24.png)
+![Lab-4.25](images/Lab-4.25.png)
 
 2. Configure:
 
@@ -218,6 +263,8 @@ Configure the following settings:
 3. Select:
    - **Create**
 
+![Lab-4.26](images/Lab-4.26.png)
+
 ---
 
 ## 📤 Step 3: Upload Template Files
@@ -225,13 +272,19 @@ Configure the following settings:
 1. Switch to:
    - **Classic Cloud Shell**
 
+![Lab-4.27](images/Lab-4.27.png)
+
 2. Select:
    - **Upload/Download files**
    - then **Upload**
 
+![Lab-4.28](images/Lab-4.28.png)
+
 3. Upload:
    - `template.json`
    - `parameters.json`
+
+![Lab-4.29](images/Lab-4.29.png)
 
 ---
 
@@ -241,6 +294,8 @@ Configure the following settings:
 
 2. Edit the template:
    - Change disk name to `az104-disk3`
+     
+![Lab-4.30](images/Lab-4.30.png)
 
 3. Save the file:
    - `Ctrl + S`
@@ -274,6 +329,8 @@ Get-AzDisk | ft Name,ResourceGroupName,Location,DiskSizeGb,ProvisioningState
 Confirm:
 - `ProvisioningState` is `Succeeded`
 
+![Lab-4.31](images/Lab-4.31.png)
+
 ---
 
 # 💻 Task 4: Deploy a Template with Azure CLI
@@ -282,6 +339,8 @@ Confirm:
 
 1. In Cloud Shell, switch to:
    - **Bash**
+
+![Lab-4.32](images/Lab-4.32.png)
 
 2. Verify uploaded files:
 
@@ -304,6 +363,8 @@ ls
 4. Exit:
    - `Ctrl + Q`
 
+![Lab-4.33](images/Lab-4.33.png)
+
 ---
 
 ## 🚀 Step 3: Deploy Using Azure CLI
@@ -317,6 +378,8 @@ az deployment group create \
 --parameters parameters.json
 ```
 
+![Lab-4.34](images/Lab-4.34.png)
+
 ---
 
 ## ✅ Step 4: Verify Deployment
@@ -326,6 +389,8 @@ Run the following command:
 ```bash
 az disk list --resource-group az104-rg3 --output table
 ```
+
+![Lab-4.35](images/Lab-4.35.png)
 
 ---
 
