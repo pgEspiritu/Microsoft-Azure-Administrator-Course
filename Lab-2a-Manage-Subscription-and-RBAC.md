@@ -52,8 +52,13 @@ Your organization requires:
 2. In the **Manage** blade, select:
    - **Properties**
 
+![Lab-2.1](images/Lab-2.1.png)
+![Lab-2.2](images/Lab-2.2.png)
+
 3. Review the:
    - **Access management for Azure resources** section
+
+![Lab-2.3](images/Lab-2.3.png)
 
 ---
 
@@ -64,6 +69,8 @@ Your organization requires:
 
 2. On the **Management groups** blade, select:
    - **+ Create**
+
+![Lab-2.4](images/Lab-2.4.png)
 
 ---
 
@@ -76,10 +83,14 @@ Configure the following settings:
 | Management group ID | `az104-mg161582618` |
 | Management group display name | `az104-mg161582618` |
 
+![Lab-2.5](images/Lab-2.5.png)
+
 1. Select:
    - **Submit**
 
 2. Refresh the page and confirm the management group was created.
+
+![Lab-2.6](images/Lab-2.6.png)
 
 > **Note:**  
 > The root management group contains all subscriptions and management groups within the tenant hierarchy.
@@ -96,10 +107,14 @@ Configure the following settings:
 2. Open:
    - **Access control (IAM)**
 
+![Lab-2.7](images/Lab-2.7.png)
+
 3. Select the:
    - **Roles** tab
 
 4. Review available built-in roles.
+
+![Lab-2.8](images/Lab-2.8.png)
 
 ---
 
@@ -109,6 +124,8 @@ Configure the following settings:
    - **+ Add**
    - then **Add role assignment**
 
+![Lab-2.9](images/Lab-2.9.png)
+
 2. Search for and select:
    - **Virtual Machine Contributor**
 
@@ -117,6 +134,8 @@ Configure the following settings:
 
 > **Note:**  
 > The Virtual Machine Contributor role allows management of virtual machines but does not allow access to the operating system.
+
+![Lab-2.10](images/Lab-2.10.png)
 
 ---
 
@@ -131,12 +150,18 @@ Configure the following settings:
 3. Select:
    - **Select**
 
+![Lab-2.11](images/Lab-2.11.png)
+
 4. Select:
    - **Review + assign**
    - then again **Review + assign**
 
+![Lab-2.12](images/Lab-2.12.png)
+
 5. Confirm the `IT Helpdesk` group now has the:
    - **Virtual Machine Contributor** role
+
+![Lab-2.13](images/Lab-2.13.png)
 
 > **Best Practice:**  
 > Assign roles to groups instead of individual users.
@@ -153,6 +178,8 @@ Configure the following settings:
 2. Select:
    - **+ Add**
    - then **Add custom role**
+
+![Lab-2.14](images/Lab-2.14.png)
 
 ---
 
@@ -176,6 +203,8 @@ On the **Basics** tab, configure:
 3. Select:
    - **Next**
 
+![Lab-2.15](images/Lab-2.15.png)
+
 ---
 
 ## Step 3: Exclude Permissions
@@ -183,17 +212,23 @@ On the **Basics** tab, configure:
 1. On the **Permissions** tab, select:
    - **+ Exclude permissions**
 
+![Lab-2.16](images/Lab-2.16.png)
+
 2. In the resource provider search field, enter:
    - `.Support`
 
 3. Select:
    - **Microsoft.Support**
 
+![Lab-2.17](images/Lab-2.17.png)
+
 4. Enable the checkbox for:
    - **Other: Registers Support Resource Provider**
-
+ 
 5. Select:
    - **Add**
+
+![Lab-2.18](images/Lab-2.18.png)
 
 > **Note:**  
 > This removes the ability to register support resource providers from the custom role.
@@ -204,6 +239,8 @@ On the **Basics** tab, configure:
 
 1. On the **Assignable scopes** tab:
    - Confirm your management group is listed
+
+![Lab-2.19](images/Lab-2.19.png)
 
 2. Select:
    - **Next**
@@ -217,6 +254,8 @@ On the **Basics** tab, configure:
    - **Review + Create**
    - then **Create**
 
+![Lab-2.20](images/Lab-2.20.png)
+
 ---
 
 # Task 4: Monitor Role Assignments with Activity Log
@@ -228,6 +267,8 @@ On the **Basics** tab, configure:
 
 2. Select:
    - **Activity log**
+
+![Lab-2.21](images/Lab-2.21.png)
 
 ---
 
