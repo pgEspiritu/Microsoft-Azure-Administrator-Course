@@ -166,7 +166,7 @@ A company wants all outbound internet traffic to pass through a firewall applian
 ### Flow
 ```text
 VM → Firewall Appliance → Internet
-``` id="udr1"
+```  
 
 ---
 
@@ -243,7 +243,7 @@ Azure Portal
 Azure Bastion
       ↓
 Virtual Machine
-``` id="bastion1"
+``` 
 
 ---
 
@@ -268,7 +268,7 @@ Azure Bastion requires a dedicated subnet named:
 
 ```text
 AzureBastionSubnet
-``` id="bastion2"
+```
 
 ---
 
@@ -315,7 +315,7 @@ User-Defined Routes
 Azure Bastion
       ↓
 Secure Resource Access
-``` id="connect1"
+``` 
 
 ---
 
