@@ -330,7 +330,7 @@ Virtual Network (VNet)
    │     └── ASGs
    │
    └── Azure DNS
-``` id="netflow1"
+```
 
 ---
 
