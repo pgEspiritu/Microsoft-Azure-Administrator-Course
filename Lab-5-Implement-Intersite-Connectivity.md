@@ -73,6 +73,8 @@ https://portal.azure.com
    - **Create**
    - **Virtual Machine**
 
+![Lab-6.1](images/Lab-6.1.png)
+
 ---
 
 ## ⚙️ Step 3: Configure Basic Settings
@@ -89,6 +91,10 @@ https://portal.azure.com
 | Username | `localadmin` |
 | Password | `Provide a complex password` |
 | Public inbound ports | `None` |
+
+![Lab-6.2](images/Lab-6.2.png)
+![Lab-6.3](images/Lab-6.3.png)
+![Lab-6.4](images/Lab-6.4.png)
 
 Select:
 
@@ -110,6 +116,8 @@ Select:
 1. Under **Virtual network**, select:
    - **Create new**
 
+![Lab-6.5](images/Lab-6.5.png)
+
 2. Configure:
 
 | Setting | Value |
@@ -118,6 +126,8 @@ Select:
 | Address range | `10.0.0.0/16` |
 | Subnet Name | `Core` |
 | Subnet address range | `10.0.0.0/24` |
+
+![Lab-6.6](images/Lab-6.6.png)
 
 3. Select:
    - **OK**
@@ -135,6 +145,8 @@ Select:
 |---|---|
 | Boot diagnostics | `Disable` |
 
+![Lab-6.7](images/Lab-6.7.png)
+
 ---
 
 ## 🚀 Step 7: Deploy the VM
@@ -144,6 +156,8 @@ Select:
 
 2. Select:
    - **Create**
+
+![Lab-6.8](images/Lab-6.8.png)
 
 > 💡 You do not need to wait for deployment before continuing.
 
@@ -162,6 +176,8 @@ Select:
    - **Create**
    - **Virtual Machine**
 
+![Lab-6.9](images/Lab-6.9.png)
+
 ---
 
 ## ⚙️ Step 2: Configure Basic Settings
@@ -179,6 +195,10 @@ Select:
 | Password | `Provide a complex password` |
 | Public inbound ports | `None` |
 
+![Lab-6.10](images/Lab-6.10.png)
+![Lab-6.11](images/Lab-6.11.png)
+![Lab-6.12](images/Lab-6.12.png)
+
 Select:
 
 - **Next : Disks >**
@@ -190,6 +210,8 @@ Select:
 1. Under **Virtual network**, select:
    - **Create new**
 
+![Lab-6.13](images/Lab-6.13.png)
+
 2. Configure:
 
 | Setting | Value |
@@ -198,6 +220,8 @@ Select:
 | Address range | `172.16.0.0/16` |
 | Subnet Name | `Manufacturing` |
 | Subnet address range | `172.16.0.0/24` |
+
+![Lab-6.14](images/Lab-6.14.png)
 
 3. Select:
    - **OK**
@@ -209,6 +233,8 @@ Select:
 | Setting | Value |
 |---|---|
 | Boot diagnostics | `Disable` |
+
+![Lab-6.15](images/Lab-6.15.png)
 
 ---
 
@@ -251,6 +277,8 @@ Select:
 | Protocol | `TCP` |
 | Destination port | `3389` |
 
+![Lab-6.16](images/Lab-6.16.png)
+
 ---
 
 ## ▶️ Step 3: Run Diagnostic Test
@@ -258,10 +286,14 @@ Select:
 1. Select:
    - **Run diagnostic tests**
 
+![Lab-6.17](images/Lab-6.17.png)
+
 2. Wait for the results.
 
 > ⚠️ Expected Result:  
 > Connectivity status should be **Unreachable** because the virtual networks are not yet peered.
+
+![Lab-6.18](images/Lab-6.18.png)
 
 ---
 
@@ -280,6 +312,8 @@ Select:
 3. Select:
    - **+ Add**
 
+![Lab-6.19](images/Lab-6.19.png)
+
 ---
 
 ## ⚙️ Step 2: Configure Peering
@@ -291,6 +325,9 @@ Select:
 | Allow access | `Enabled` |
 | Allow forwarded traffic | `Enabled` |
 
+![Lab-6.22](images/Lab-6.22.png)
+![Lab-6.23](images/Lab-6.23.png)
+
 ---
 
 ## ⚙️ Step 3: Configure Reverse Peering
@@ -301,6 +338,9 @@ Select:
 | Allow access | `Enabled` |
 | Allow forwarded traffic | `Enabled` |
 
+![Lab-6.20](images/Lab-6.20.png)
+![Lab-6.21](images/Lab-6.21.png)
+
 ---
 
 ## 🚀 Step 4: Create Peering
@@ -310,6 +350,9 @@ Select:
 
 2. Verify:
    - Peering status becomes **Connected**
+
+![Lab-6.24](images/Lab-6.24.png)
+![Lab-6.25](images/Lab-6.25.png)
 
 ---
 
@@ -325,6 +368,8 @@ Select:
 2. Record the:
    - **Private IP Address**
 
+![Lab-6.26](images/Lab-6.26.png)
+
 ---
 
 ## ⚡ Step 2: Run PowerShell Command from ManufacturingVM
@@ -338,6 +383,8 @@ Select:
 3. Select:
    - **RunPowerShellScript**
 
+![Lab-6.27](images/Lab-6.27.png)
+
 4. Run:
 
 ```powershell
@@ -350,6 +397,8 @@ Example:
 Test-NetConnection 10.0.0.4 -Port 3389
 ```
 
+![Lab-6.28](images/Lab-6.28.png)
+
 ---
 
 ## ✅ Step 3: Verify Connectivity
@@ -359,6 +408,8 @@ Expected Result:
 - `TcpTestSucceeded : True`
 
 > 💡 Connectivity now works because virtual network peering was configured.
+
+![Lab-6.29](images/Lab-6.29.png)
 
 ---
 
@@ -375,6 +426,8 @@ Expected Result:
    - **Subnets**
    - **+ Subnet**
 
+![Lab-6.30](images/Lab-6.30.png)
+
 3. Configure:
 
 | Setting | Value |
@@ -385,6 +438,8 @@ Expected Result:
 4. Select:
    - **Add**
 
+![Lab-6.31](images/Lab-6.31.png)
+
 ---
 
 ## 🛣️ Step 2: Create Route Table
@@ -394,6 +449,8 @@ Expected Result:
 
 2. Select:
    - **+ Create**
+
+![Lab-6.32](images/Lab-6.32.png)
 
 ---
 
@@ -406,9 +463,13 @@ Expected Result:
 | Name | `rt-CoreServices` |
 | Propagate gateway routes | `No` |
 
+![Lab-6.33](images/Lab-6.33.png)
+
 4. Select:
    - **Review + create**
    - then **Create**
+
+![Lab-6.34](images/Lab-6.34.png)
 
 ---
 
@@ -421,6 +482,8 @@ Expected Result:
    - **Routes**
    - **+ Add**
 
+![Lab-6.35](images/Lab-6.35.png)
+
 3. Configure:
 
 | Setting | Value |
@@ -430,6 +493,8 @@ Expected Result:
 | Destination IP addresses | `10.0.0.0/16` |
 | Next hop type | `Virtual appliance` |
 | Next hop address | `10.0.1.7` |
+
+![Lab-6.36](images/Lab-6.36.png)
 
 4. Select:
    - **Add**
@@ -444,12 +509,16 @@ Expected Result:
 2. Select:
    - **+ Associate**
 
+![Lab-6.37](images/Lab-6.37.png)
+
 3. Configure:
 
 | Setting | Value |
 |---|---|
 | Virtual network | `CoreServicesVnet` |
 | Subnet | `perimeter` |
+
+![Lab-6.38](images/Lab-6.38.png)
 
 4. Select:
    - **OK**
