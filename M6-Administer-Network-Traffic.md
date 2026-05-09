@@ -67,7 +67,7 @@ Internet Users
 Public Load Balancer
       ↓
 Web Servers
-``` id="plb1"
+```
 
 ---
 
@@ -103,7 +103,7 @@ Application Servers
 Internal Load Balancer
       ↓
 Database Servers
-``` id="ilb1"
+```
 
 ---
 
@@ -236,7 +236,7 @@ Routes traffic based on URL paths.
 ```text
 contoso.com/images → Image Server
 contoso.com/api → API Server
-``` id="appgw1"
+``` 
 
 ---
 
@@ -298,7 +298,7 @@ Application Gateway
 Routing Rules
       ↓
 Backend Web Servers
-``` id="appgw2"
+```
 
 ---
 
@@ -362,7 +362,7 @@ Backend Servers
 Internal Load Balancer
       ↓
 Database Servers
-``` id="traffic1"
+```
 
 ---
 
