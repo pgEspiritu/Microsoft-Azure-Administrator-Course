@@ -234,7 +234,7 @@ Availability Zones are physically separate datacenters within an Azure region.
 Zone 1 → VM1
 Zone 2 → VM2
 Zone 3 → VM3
-``` id="az1"
+``` 
 
 ---
 
@@ -264,7 +264,7 @@ Availability Set
    ├── VM1
    ├── VM2
    └── VM3
-``` id="aset1"
+```
 
 ---
 
@@ -336,7 +336,7 @@ VM Scale Set
    ├── VM1
    ├── VM2
    ├── VM3
-``` id="vmss1"
+``` 
 
 ---
 
