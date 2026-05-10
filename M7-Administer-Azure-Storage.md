@@ -229,7 +229,7 @@ Virtual Machines
 Virtual Network
       ↓
 Storage Account
-``` id="storagefw1"
+```
 
 ---
 
@@ -272,7 +272,7 @@ A Shared Access Signature (SAS) token grants temporary delegated access to Azure
 
 ```text
 User receives secure temporary link to upload/download files.
-``` id="sas1"
+```
 
 ---
 
@@ -347,7 +347,7 @@ Lifecycle management automatically manages blob storage based on rules.
 ```text
 Move blobs to Cool tier after 30 days.
 Delete blobs after 365 days.
-``` id="lifecycle1"
+```
 
 ---
 
@@ -426,7 +426,7 @@ Users / Virtual Machines
 Azure File Share
          ↓
 Storage Account
-``` id="fileshare1"
+```
 
 ---
 
