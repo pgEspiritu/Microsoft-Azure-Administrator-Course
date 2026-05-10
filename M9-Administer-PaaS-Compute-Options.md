@@ -61,7 +61,7 @@ App Service Plan
 Hosts
       ↓
 App Services
-``` id="appplan1"
+```
 
 ---
 
@@ -261,7 +261,7 @@ Deploy to Staging
 Test Application
       ↓
 Swap with Production
-``` id="slot1"
+``` 
 
 ---
 
@@ -341,7 +341,7 @@ Azure App Service
 VNet Integration
       ↓
 Database / Backend Services
-``` id="appnet1"
+```
 
 ---
 
