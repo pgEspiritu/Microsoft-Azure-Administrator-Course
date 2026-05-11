@@ -73,6 +73,8 @@ https://portal.azure.com
 Build your own template in the editor
 ```
 
+![Lab-7.1](images/Lab-7.1.png)
+
 ---
 
 ### Step 2: Load the Template File
@@ -82,6 +84,8 @@ Build your own template in the editor
 ```plaintext
 Load file
 ```
+
+![Lab-7.2](images/Lab-7.2.png)
 
 2. Locate and select:
 
@@ -95,11 +99,15 @@ Load file
 Open
 ```
 
+![Lab-7.3](images/Lab-7.3.png)
+
 4. Select:
 
 ```plaintext
 Save
 ```
+
+![Lab-7.4](images/Lab-7.4.png)
 
 ---
 
@@ -111,17 +119,24 @@ Save
 Edit parameters
 ```
 
+![Lab-7.5](images/Lab-7.5.png)
+![Lab-7.6](images/Lab-7.6.png)
+
 2. Load the following file:
 
 ```plaintext
 \Allfiles\Labs\06\az104-06-vms-parameters.json
 ```
 
+![Lab-7.7](images/Lab-7.7.png)
+
 3. Select:
 
 ```plaintext
 Save
 ```
+
+![Lab-7.8](images/Lab-7.8.png)
 
 ---
 
@@ -134,6 +149,9 @@ Use the following information to complete the fields on the custom deployment pa
 | Subscription | Your Azure subscription |
 | Resource Group | `az104-rg6` (Create new if necessary) |
 | Password | Provide a secure password |
+
+![Lab-7.9](images/Lab-7.9.png)
+![Lab-7.10](images/Lab-7.10.png)
 
 > ⚠️ If you receive an error that the VM size is unavailable, select another available SKU with at least 2 cores.
 
@@ -153,6 +171,8 @@ Review + create
 Create
 ```
 
+![Lab-7.11](images/Lab-7.11.png)
+
 > ⏳ Wait approximately 5 minutes for the deployment to complete before continuing.
 
 ---
@@ -165,6 +185,8 @@ The template deploys:
 - 🔒 One network security group
 - 💻 Three virtual machines
 - 🧩 Three subnets
+
+![Lab-7.12](images/Lab-7.12.png)
 
 ---
 
@@ -198,6 +220,8 @@ Load balancers
 + Create
 ```
 
+![Lab-7.13](images/Lab-7.13.png)
+
 ---
 
 ## ⚙️ Configure Basic Settings
@@ -213,6 +237,8 @@ Use the following settings:
 | SKU | Standard |
 | Type | Public |
 | Tier | Regional |
+
+![Lab-7.14](images/Lab-7.14.png)
 
 Select:
 
@@ -234,6 +260,8 @@ Select:
 Add a frontend IP configuration
 ```
 
+![Lab-7.15](images/Lab-7.15.png)
+
 Use the following settings:
 
 | Setting | Value |
@@ -242,6 +270,8 @@ Use the following settings:
 | IP type | IP address |
 | Gateway Load balancer | None |
 | Public IP address | Create new |
+
+![Lab-7.16](images/Lab-7.16.png)
 
 ---
 
@@ -283,6 +313,8 @@ Select:
 Add a backend pool
 ```
 
+![Lab-7.17](images/Lab-7.17.png)
+
 Use the following settings:
 
 | Setting | Value |
@@ -290,6 +322,8 @@ Use the following settings:
 | Name | `az104-be` |
 | Virtual network | `az104-06-vnet1 (az104-rg6)` |
 | Backend Pool Configuration | NIC |
+
+![Lab-7.18](images/Lab-7.18.png)
 
 ---
 
@@ -299,6 +333,8 @@ Select the following virtual machines:
 
 - ☑️ `az104-06-vm0`
 - ☑️ `az104-06-vm1`
+
+![Lab-7.19](images/Lab-7.19.png)
 
 Select:
 
@@ -311,6 +347,9 @@ Then select:
 ```plaintext
 Save
 ```
+
+![Lab-7.20](images/Lab-7.20.png)
+![Lab-7.21](images/Lab-7.21.png)
 
 Select:
 
@@ -337,6 +376,8 @@ Select:
 ```plaintext
 + Add
 ```
+
+![Lab-7.22](images/Lab-7.22.png)
 
 Use the following settings:
 
@@ -393,6 +434,10 @@ Select:
 Save
 ```
 
+![Lab-7.23](images/Lab-7.23.png)
+![Lab-7.24](images/Lab-7.24.png)
+![Lab-7.25](images/Lab-7.25.png)
+
 ---
 
 # 🌍 Test the Load Balancer
@@ -408,6 +453,8 @@ Frontend IP configuration
 ```
 
 2. Copy the Public IP address.
+
+![Lab-7.26](images/Lab-7.26.png)
 
 ---
 
@@ -426,6 +473,9 @@ or
 ```plaintext
 Hello World from az104-06-vm1
 ```
+
+![Lab-7.27](images/Lab-7.27.png)
+![Lab-7.28](images/Lab-7.28.png)
 
 ---
 
@@ -489,6 +539,9 @@ Select:
 + Subnet
 ```
 
+![Lab-7.29](images/Lab-7.29.png)
+
+
 Use the following settings:
 
 | Setting | Value |
@@ -506,6 +559,8 @@ Add
 ```
 
 > 📌 Application Gateway requires a dedicated subnet of `/27` or larger.
+
+![Lab-7.30](images/Lab-7.30.png)
 
 ---
 
@@ -527,6 +582,8 @@ Application gateways
 + Create
 ```
 
+![Lab-7.31](images/Lab-7.31.png)
+
 ---
 
 # ⚙️ Configure Basic Settings
@@ -545,6 +602,9 @@ Use the following settings:
 | HTTP2 | Disabled |
 | Virtual network | `az104-06-vnet1` |
 | Subnet | `subnet-appgw (10.60.3.224/27)` |
+
+![Lab-7.32](images/Lab-7.32.png)
+![Lab-7.33](images/Lab-7.33.png)
 
 Select:
 
@@ -571,6 +631,8 @@ Select:
 OK
 ```
 
+![Lab-7.34](images/Lab-7.34.png)
+
 Then select:
 
 ```plaintext
@@ -591,6 +653,8 @@ Select:
 Add a backend pool
 ```
 
+![Lab-7.35](images/Lab-7.35.png)
+
 Use the following settings:
 
 | Setting | Value |
@@ -605,6 +669,8 @@ Select:
 ```plaintext
 Add
 ```
+
+![Lab-7.36](images/Lab-7.36.png)
 
 ---
 
@@ -630,6 +696,8 @@ Select:
 Add
 ```
 
+![Lab-7.37](images/Lab-7.37.png)
+
 ---
 
 ## 🎥 Backend Pool for Videos
@@ -654,6 +722,8 @@ Select:
 Add
 ```
 
+![Lab-7.38](images/Lab-7.38.png)
+
 ---
 
 # 🛣️ Configure Routing Rules
@@ -670,6 +740,8 @@ Select:
 Add a routing rule
 ```
 
+![Lab-7.39](images/Lab-7.39.png)
+
 ---
 
 ## ⚙️ Configure Listener
@@ -685,6 +757,8 @@ Use the following settings:
 | Protocol | HTTP |
 | Port | 80 |
 | Listener type | Basic |
+
+![Lab-7.40](images/Lab-7.40.png)
 
 ---
 
@@ -704,6 +778,8 @@ Select:
 ```plaintext
 Add
 ```
+
+![Lab-7.41](images/Lab-7.41.png)
 
 ---
 
@@ -734,6 +810,8 @@ Select:
 Add
 ```
 
+![Lab-7.42](images/Lab-7.42.png)
+
 ---
 
 ## 🎥 Video Routing Rule
@@ -753,7 +831,11 @@ Select:
 Add
 ```
 
+![Lab-7.43](images/Lab-7.43.png)
+
 ---
+
+![Lab-7.44](images/Lab-7.44.png)
 
 # ✅ Deploy the Application Gateway
 
@@ -776,6 +858,8 @@ Next : Review + create
 ```plaintext
 Create
 ```
+
+![Lab-7.45](images/Lab-7.45.png)
 
 > ⏳ Deployment takes approximately 5–10 minutes.
 
@@ -803,6 +887,8 @@ Monitoring → Backend health
 Healthy
 ```
 
+![Lab-7.46](images/Lab-7.46.png)
+
 ---
 
 # 🌍 Test Application Gateway Routing
@@ -824,6 +910,8 @@ http://<frontend-ip>/image/
 vm1
 ```
 
+![Lab-7.47](images/Lab-7.47.png)
+
 ---
 
 ## 🎥 Test Video Routing
@@ -839,6 +927,8 @@ http://<frontend-ip>/video/
 ```plaintext
 vm2
 ```
+
+![Lab-7.48](images/Lab-7.48.png)
 
 > 📌 You may need to refresh multiple times or use an InPrivate/Incognito window.
 
