@@ -54,6 +54,8 @@ In this task, you will create and configure a storage account. The storage accou
 
 2. Search for and select **Storage accounts**, and then click **+ Create**.
 
+![Lab-8.1](images/Lab-8.1.png)
+
 3. On the **Basics** tab of the **Create a storage account** blade, specify the following settings (leave others with their default values):
 
 | Setting | Value |
@@ -68,6 +70,9 @@ In this task, you will create and configure a storage account. The storage accou
 
 > 💡 Did you know?  
 > You should use the Standard performance tier for most applications. Use the Premium performance tier for enterprise or high-performance applications.
+
+![Lab-8.2](images/Lab-8.2.png)
+![Lab-8.3](images/Lab-8.3.png)
 
 ---
 
@@ -87,6 +92,8 @@ In this task, you will create and configure a storage account. The storage accou
 
 This will restrict inbound access while allowing outbound access.
 
+![Lab-8.4](images/Lab-8.4.png)
+
 ---
 
 ### 🛡️ Data Protection Tab
@@ -97,6 +104,8 @@ This will restrict inbound access while allowing outbound access.
 3. Note:
    - You can enable versioning for blobs.
 4. Accept the defaults.
+
+![Lab-8.5](images/Lab-8.5.png)
 
 ---
 
@@ -113,6 +122,8 @@ This will restrict inbound access while allowing outbound access.
 1. Select **Review + create**.
 2. Wait for the validation process to complete.
 3. Click **Create**.
+
+![Lab-8.6](images/Lab-8.6.png)
 
 Once the storage account is deployed:
 
@@ -151,6 +162,10 @@ These are global settings for the storage account.
 
 6. Save your changes.
 
+![Lab-8.7](images/Lab-8.7.png)
+![Lab-8.8](images/Lab-8.8.png)
+![Lab-8.9](images/Lab-8.9.png)
+
 ---
 
 ## 🔹 Review Redundancy Configuration
@@ -160,6 +175,8 @@ These are global settings for the storage account.
    - 🌎 Primary data center location
    - 🌎 Secondary data center location
 
+![Lab-8.10](images/Lab-8.10.png)
+
 ---
 
 ## 🔹 Configure Lifecycle Management
@@ -167,8 +184,12 @@ These are global settings for the storage account.
 1. In the **Data management** blade, select **Lifecycle management**.
 2. Select **Add a rule**.
 
+![Lab-8.11](images/Lab-8.11.png)
+
 3. Name the rule:
    - `Movetocool`
+
+![Lab-8.12](images/Lab-8.12.png)
 
 4. Notice your options for limiting the scope of the rule.
 
@@ -185,13 +206,13 @@ These are global settings for the storage account.
 | If base blobs were last modified more than | `30 days ago` |
 | Action | `Move to cool storage` |
 
+![Lab-8.13](images/Lab-8.13.png)
+
 2. Notice your other choices.
 
 3. Notice you can configure other conditions.
 
 4. Select **Add** when you are done exploring.
-
-📸 Screenshot move to cool rule conditions.
 
 ---
 
@@ -207,6 +228,8 @@ In this task, you will create a blob container and upload an image. Blob contain
 
 2. In the **Data storage** blade, select **Containers**.
 
+![Lab-8.14](images/Lab-8.14.png)
+
 3. Click **+ Add container** and create a container with the following settings:
 
 | Setting | Value |
@@ -214,7 +237,7 @@ In this task, you will create a blob container and upload an image. Blob contain
 | Name | `data` |
 | Public access level | Notice the access level is set to private |
 
-📸 Screenshot of create a container.
+![Lab-8.15](images/Lab-8.15.png)
 
 ---
 
@@ -223,7 +246,11 @@ In this task, you will create a blob container and upload an image. Blob contain
 1. On your container, scroll to the ellipsis (**…**) on the far right.
 2. Select **Access policy**.
 
+![Lab-8.16](images/Lab-8.16.png)
+
 3. In the **Immutable blob storage** area, select **Add policy**.
+
+![Lab-8.17](images/Lab-8.17.png)
 
 4. Configure the following settings:
 
@@ -233,6 +260,9 @@ In this task, you will create a blob container and upload an image. Blob contain
 | Set retention period for | `180 days` |
 
 5. Select **Save**.
+
+![Lab-8.18](images/Lab-8.18.png)
+![Lab-8.19](images/Lab-8.19.png)
 
 ---
 
@@ -244,6 +274,8 @@ In this task, you will create a blob container and upload an image. Blob contain
 
 1. Return to the containers page.
 2. Select your `data` container and then click **Upload**.
+
+![Lab-8.20](images/Lab-8.20.png)
 
 3. On the **Upload blob** blade, expand the **Advanced** section.
 
@@ -262,6 +294,10 @@ In this task, you will create a blob container and upload an image. Blob contain
 
 5. Click **Upload**.
 
+![Lab-8.20](images/Lab-8.20.png)
+![Lab-8.21](images/Lab-8.21.png)
+![Lab-8.22](images/Lab-8.22.png)
+
 ---
 
 ## 🔹 Verify the Blob Upload
@@ -269,6 +305,8 @@ In this task, you will create a blob container and upload an image. Blob contain
 1. Confirm you have:
    - ✅ A new folder
    - ✅ Your file uploaded
+
+![Lab-8.23](images/Lab-8.23.png)
 
 2. Select your uploaded file and review the ellipsis (**…**) options including:
    - ⬇️ Download
@@ -283,6 +321,8 @@ In this task, you will create a blob container and upload an image. Blob contain
 1. Copy the file URL:
    - Settings → Properties blade
 
+![Lab-8.24](images/Lab-8.24.png)
+
 2. Paste the URL into a new **InPrivate** browsing window.
 
 3. You should be presented with an XML-formatted message stating:
@@ -292,6 +332,8 @@ In this task, you will create a blob container and upload an image. Blob contain
 
 > 💡 Note: This is expected, since the container you created has the public access level set to Private (no anonymous access).
 
+![Lab-8.25](images/Lab-8.25.png)
+
 ---
 
 # 🔐 Configure Limited Access to the Blob Storage
@@ -300,6 +342,8 @@ In this task, you will create a blob container and upload an image. Blob contain
 
 2. Select the ellipsis (**…**) to the far right, then select:
    - **Generate SAS**
+
+![Lab-8.26](images/Lab-8.26.png)
 
 3. Specify the following settings (leave others with their default values):
 
@@ -315,11 +359,17 @@ In this task, you will create a blob container and upload an image. Blob contain
 
 4. Click **Generate SAS token and URL**.
 
+![Lab-8.27](images/Lab-8.27.png)
+
 5. Copy the **Blob SAS URL** entry to the clipboard.
+
+![Lab-8.28](images/Lab-8.28.png)
 
 6. Open another **InPrivate** browser window and navigate to the Blob SAS URL you copied in the previous step.
 
 > 💡 Note: You should be able to view the content of the file.
+
+![Lab-8.29](images/Lab-8.29.png)
 
 ---
 
@@ -335,12 +385,16 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 2. In the **Data storage** blade, click **File shares**.
 
+![Lab-8.30](images/Lab-8.30.png)
+
 3. Click **+ File share** and on the **Basics** tab give the file share a name:
    - `share1`
 
 4. Notice the **Access tier** options.
 5. Keep the default:
    - `Transaction optimized`
+
+![Lab-8.31](images/Lab-8.31.png)
 
 ---
 
@@ -352,11 +406,15 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 > 💡 Note: We are disabling backup to simplify the lab configuration.
 
+![Lab-8.32](images/Lab-8.32.png)
+
 3. Click **Review + create**, and then **Create**.
+
+![Lab-8.33](images/Lab-8.33.png)
 
 4. Wait for the file share to deploy.
 
-📸 Screenshot of the create file share page.
+![Lab-8.34](images/Lab-8.34.png)
 
 ---
 
@@ -381,6 +439,9 @@ This lets you create a folder structure.
 2. Browse to a file of your choice.
 3. Click **Upload**.
 
+![Lab-8.35](images/Lab-8.35.png)
+![Lab-8.36](images/Lab-8.36.png)
+
 > 📌 Note: You can view file shares and manage those shares in the Storage Browser. There are currently no restrictions.
 
 ---
@@ -395,12 +456,18 @@ This lets you create a folder structure.
 
 2. Select **+ Create**.
 
+![Lab-8.37](images/Lab-8.37.png)
+
 3. Select your resource group and give the virtual network a name:
    - `vnet1`
+
+![Lab-8.38](images/Lab-8.38.png)
 
 4. Take the defaults for other parameters.
 
 5. Select **Review + create**, and then **Create**.
+
+![Lab-8.39](images/Lab-8.39.png)
 
 6. Wait for the virtual network to deploy, and then select:
    - **Go to resource**
@@ -413,6 +480,8 @@ This lets you create a folder structure.
 
 2. Select **Add**.
 
+![Lab-8.40](images/Lab-8.40.png)
+
 3. Configure the following settings:
 
 | Setting | Value |
@@ -421,6 +490,8 @@ This lets you create a folder structure.
 | Subnets | Check the `Default` subnet |
 
 4. Click **Add** to save your changes.
+
+![Lab-8.41](images/Lab-8.41.png)
 
 ---
 
@@ -433,11 +504,15 @@ This lets you create a folder structure.
 3. Under **Public network access** select:
    - **Manage**
 
+![Lab-8.42](images/Lab-8.42.png)
+
 4. Select:
    - **Add a virtual network**
 
 5. Then select:
    - **Add existing network**
+
+![Lab-8.43](images/Lab-8.43.png)
 
 6. Select:
    - `vnet1`
@@ -445,12 +520,16 @@ This lets you create a folder structure.
 
 7. Select **Add**.
 
+![Lab-8.44](images/Lab-8.44.png)
+
 ---
 
 ## 🔹 Remove Client IP Access
 
 1. In the **IPv4 Addresses** section:
    - Delete your machine IP address.
+
+![Lab-8.45](images/Lab-8.45.png)
 
 > 💡 Allowed traffic should only come from the virtual network.
 
@@ -469,13 +548,13 @@ This lets you create a folder structure.
 > 💡 Note: You should receive a message:
 > ❌ Not authorized to perform this operation.
 
+![Lab-8.46](images/Lab-8.46.png)
+
 You are not connecting from the virtual network.
 
 It may take a couple of minutes for this to take effect.
 
 You may still be able to view the file share, but not the files or blobs in the storage account.
-
-📸 Screenshot unauthorized access.
 
 ---
 
