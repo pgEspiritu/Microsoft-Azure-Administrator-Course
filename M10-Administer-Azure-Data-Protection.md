@@ -75,7 +75,7 @@ Azure Resource
 Azure Backup Service
       ↓
 Recovery Services Vault / Backup Vault
-``` id="backup1"
+```
 
 ---
 
@@ -239,7 +239,7 @@ Backup Vault
 Select Recovery Point
       ↓
 Restore Resource
-``` id="restore1"
+```
 
 ---
 
@@ -268,7 +268,7 @@ Primary Azure Region
 Replication
         ↓
 Secondary Azure Region
-``` id="asr1"
+``` 
 
 ---
 
@@ -362,7 +362,7 @@ Azure Backup
 Recovery Services Vault / Backup Vault
       ↓
 Restore & Disaster Recovery
-``` id="dataprotection1"
+```
 
 ---
 
