@@ -68,6 +68,8 @@ Availability zones offer the highest level of uptime SLA for virtual machines at
 
    🖥️ **Azure virtual machine**
 
+![Lab-9.1](images/Lab-9.1.png)
+
 > 📌 Notice the other deployment choices available in the drop-down list.
 
 ---
@@ -84,6 +86,8 @@ Availability zones offer the highest level of uptime SLA for virtual machines at
 
    - ✅ Zone 1
    - ✅ Zone 2
+
+![Lab-9.2](images/Lab-9.2.png)
 
 > 📘 **Note:**  
 > This deployment creates two virtual machines in the selected region, with one VM placed in each availability zone.
@@ -119,6 +123,11 @@ Complete the following settings.
 > 📘 **Note:**  
 > After selecting both availability zones, select **Edit names** under the VM name field to configure both VM names.
 
+![Lab-9.3](images/Lab-9.3.png)
+![Lab-9.4](images/Lab-9.4.png)
+![Lab-9.5](images/Lab-9.5.png)
+![Lab-9.6](images/Lab-9.6.png)
+
 ---
 
 ## 🔹 Step 5: Configure the Disks Tab
@@ -135,6 +144,8 @@ Complete the following settings.
 | Delete with VM | checked (default) |
 | Enable Ultra Disk compatibility | Unchecked |
 
+![Lab-9.7](images/Lab-9.7.png)
+
 ---
 
 ## 🔹 Step 6: Configure the Networking Tab
@@ -149,6 +160,8 @@ Complete the following settings.
 |---|---|
 | Delete public IP and NIC when VM is deleted | Checked |
 | Load balancing options | None |
+
+![Lab-9.8](images/Lab-9.8.png)
 
 ---
 
@@ -176,6 +189,8 @@ Complete the following settings.
 |---|---|
 | Boot diagnostics | Disable |
 
+![Lab-9.9](images/Lab-9.9.png)
+
 ---
 
 ## 🔹 Step 9: Review and Create the Virtual Machines
@@ -196,12 +211,14 @@ Complete the following settings.
 
    🚀 **Create**
 
+![Lab-9.10](images/Lab-9.10.png)
+
 > 📘 **Note:**  
-> Notice that Azure independently creates and manages the following resources:
->
-> - Network Interface Cards (NICs)
-> - Managed disks
-> - Public IP addresses (if configured)
+
+Notice that Azure independently creates and manages the following resources:
+- Network Interface Cards (NICs)
+- Managed disks
+- - Public IP addresses (if configured)
 
 ---
 
@@ -253,6 +270,8 @@ This scaling concept also applies to managed disks, where you can modify:
 
    🔄 **Resize**
 
+![Lab-9.11](images/Lab-9.11.png)
+
 6. When prompted, confirm the resize operation.
 
 > 📘 **Note:**  
@@ -270,6 +289,8 @@ This scaling concept also applies to managed disks, where you can modify:
 
    ➕ **Create and attach a new disk**
 
+![Lab-9.12](images/Lab-9.12.png)
+
 3. Configure the following settings.
 
 | Setting | Value |
@@ -282,6 +303,8 @@ This scaling concept also applies to managed disks, where you can modify:
 
    ✅ **Apply**
 
+![Lab-9.13](images/Lab-9.13.png)
+
 ---
 
 ## 🔹 Step 3: Detach the Disk
@@ -291,6 +314,8 @@ This scaling concept also applies to managed disks, where you can modify:
 2. Click:
 
    🔌 **Detach**
+
+![Lab-9.14](images/Lab-9.14.png)
 
 > 📘 **Note:**  
 > You may need to scroll horizontally to locate the detach icon.
@@ -329,6 +354,8 @@ This scaling concept also applies to managed disks, where you can modify:
 
    💾 **Save**
 
+![Lab-9.15](images/Lab-9.15.png)
+
 ---
 
 ## 🔹 Step 5: Reattach the Existing Disk
@@ -345,6 +372,8 @@ This scaling concept also applies to managed disks, where you can modify:
 
    🔗 **Attach existing disks**
 
+![Lab-9.16](images/Lab-9.16.png)
+
 4. In the **Disk name** drop-down list, select:
 
    📀 VM1-DISK1
@@ -357,11 +386,271 @@ This scaling concept also applies to managed disks, where you can modify:
 
    ✅ **Apply**
 
-> 📘 **Note:**  
-> You have now:
->
-> - Created a virtual machine
-> - Resized the VM SKU
-> - Modified the managed disk storage type
+![Lab-9.17](images/Lab-9.17.png)
+
+> 📘 **Note:**
+
+You have now:
+- Created a virtual machine
+- Resized the VM SKU
+- Modified the managed disk storage type
 
 > 📘 In the next task, you will use Virtual Machine Scale Sets to automate scaling.
+
+
+---
+
+# 🧱 Task 3: Create and configure Azure Virtual Machine Scale Sets
+
+---
+
+### ➕ Create VMSS
+
+Search **Virtual machine scale sets** → Click **+ Create**
+
+![Lab-9.18](images/Lab-9.18.png)
+
+---
+
+### ⚙️ Basics
+
+| Setting | Value |
+|--------|------|
+| VMSS name | vmss1 |
+| Region | westus2 |
+| Availability zones | 1, 2, 3 |
+| Orchestration mode | Uniform |
+| Image | Windows Server 2025 |
+| Size | Standard D2s_v3 |
+| Username | localadmin |
+
+![Lab-9.19](images/Lab-9.19.png)
+![Lab-9.20](images/Lab-9.20.png)
+![Lab-9.21](images/Lab-9.21.png)
+
+---
+
+### 🌐 Networking configuration
+
+Edit virtual network:
+
+| Setting | Value |
+|--------|------|
+| Name | vmss-vnet |
+| Address range | 10.82.0.0/20 |
+| Subnet | subnet0 |
+| Subnet range | 10.82.0.0/24 |
+
+![Lab-9.22](images/Lab-9.22.png)
+![Lab-9.23](images/Lab-9.23.png)
+![Lab-9.24](images/Lab-9.24.png)
+![Lab-9.25](images/Lab-9.25.png)
+
+---
+
+### 🔐 NSG configuration
+
+Create NSG:
+
+| Setting | Value |
+|--------|------|
+| Name | vmss1-nsg |
+
+![Lab-9.26](images/Lab-9.26.png)
+![Lab-9.27](images/Lab-9.27.png)
+
+Inbound rule:
+
+| Setting | Value |
+|--------|------|
+| Service | HTTP |
+| Action | Allow |
+| Priority | 1010 |
+| Name | allow-http |
+
+![Lab-9.28](images/Lab-9.28.png)
+![Lab-9.29](images/Lab-9.29.png)
+
+---
+
+### 🌍 Public IP
+
+Enable Public IP for NIC
+
+![Lab-9.30](images/Lab-9.30.png)
+
+---
+
+### ⚖️ Load balancer
+
+Create:
+
+| Setting | Value |
+|--------|------|
+| Load balancer name | vmss-lb |
+
+![Lab-9.31](images/Lab-9.31.png)
+![Lab-9.32](images/Lab-9.32.png)
+![Lab-9.33](images/Lab-9.33.png)
+![Lab-9.34](images/Lab-9.34.png)
+
+---
+
+### ✔️ Finalize
+
+- Boot diagnostics: Disable
+- Review + Create → Create
+
+![Lab-9.35](images/Lab-9.35.png)
+![Lab-9.36](images/Lab-9.36.png)
+
+---
+
+# 📈 Task 4: Scale Azure Virtual Machine Scale Sets
+
+---
+
+### 📊 Autoscale setup
+
+Go to VMSS → **Scaling**
+
+Select **Custom autoscale**
+
+![Lab-9.37](images/Lab-9.37.png)
+
+---
+
+### 📤 Scale-out rule
+
+| Setting | Value |
+|--------|------|
+| Metric | Percentage CPU |
+| Operator | Greater than |
+| Threshold | 70 |
+| Duration | 10 minutes |
+| Action | Increase by 50% |
+
+Save
+
+![Lab-9.38](images/Lab-9.38.png)
+![Lab-9.39](images/Lab-9.39.png)
+
+---
+
+### 📥 Scale-in rule
+
+| Setting | Value |
+|--------|------|
+| Operator | Less than |
+| Threshold | 30 |
+| Action | Decrease by 50% |
+
+Save
+
+![Lab-9.40](images/Lab-9.40.png)
+![Lab-9.41](images/Lab-9.41.png)
+
+---
+
+### 📏 Instance limits
+
+| Setting | Value |
+|--------|------|
+| Minimum | 2 |
+| Maximum | 10 |
+| Default | 2 |
+
+Save
+
+![Lab-9.42](images/Lab-9.42.png)
+
+![Lab-9.43](images/Lab-9.43.png)
+
+---
+
+# 💻 Task 5: Azure PowerShell VM creation
+
+---
+
+### 🟦 Cloud Shell (PowerShell)
+
+Run:
+
+```powershell
+New-AzVm `
+-ResourceGroupName 'az104-rg8-lod61669901' `
+-Name 'myPSVM' `
+-Location 'westus2' `
+-Image 'Win2019Datacenter' `
+-Zone '1' `
+-Size 'Standard_D2s_v3' `
+-Credential (Get-Credential)
+```
+
+### 📋 Verify VM
+
+```powershell
+Get-AzVM -ResourceGroupName 'az104-rg8-lod61669901' -Status
+```
+
+### ⛔ Stop VM
+
+```powershell
+Stop-AzVM -ResourceGroupName 'az104-rg8-lod61669901' -Name 'myPSVM'
+```
+
+![Lab-9.44](images/Lab-9.44.png)
+![Lab-9.45](images/Lab-9.45.png)
+
+---
+
+# 💻 Task 6: CLI VM creation
+
+---
+
+### 🐧 Bash Cloud Shell
+
+```bash
+az vm create --name myCLIVM --resource-group az104-rg8-lod61669901 --image Canonical:0001-com-ubuntu-server-jammy:22_04-lts:latest --admin-username localadmin --generate-ssh-keys --size Standard_D2s_v3
+```
+
+### 📋 Verify VM
+
+```bash
+az vm show --name myCLIVM --resource-group az104-rg8-lod61669901 --show-details --output table
+```
+
+### ⛔ Deallocate VM
+
+```bash
+az vm deallocate --resource-group az104-rg8-lod61669901 --name myCLIVM
+```
+
+![Lab-9.46](images/Lab-9.46.png)
+
+---
+
+# 🧹 Cleanup
+
+Delete resource group:
+
+Azure Portal → Delete Resource Group
+PowerShell:
+```powershell
+Remove-AzResourceGroup -Name resourceGroupName
+```
+
+CLI:
+```bash
+az group delete --name resourceGroupName
+```
+
+---
+
+# 📌 Key takeaways
+- Azure VMs are scalable compute resources
+- Scaling can be vertical and horizontal
+- VMSS automates scaling
+- Instances share same configuration
+- Autoscaling reacts to demand
+
