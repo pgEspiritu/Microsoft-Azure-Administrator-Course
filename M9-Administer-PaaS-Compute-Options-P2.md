@@ -60,7 +60,7 @@ Build Container Image
 Push to Azure Container Registry
         ↓
 Deploy to Azure Services
-``` id="acr1"
+``` 
 
 ---
 
@@ -116,7 +116,7 @@ A container image is a packaged application template that includes:
 
 ```bash
 docker push myregistry.azurecr.io/myapp:v1
-``` id="acr2"
+``` 
 
 ---
 
@@ -124,7 +124,7 @@ docker push myregistry.azurecr.io/myapp:v1
 
 ```bash
 docker pull myregistry.azurecr.io/myapp:v1
-``` id="acr3"
+``` 
 
 ---
 
@@ -173,7 +173,7 @@ Container Image
 Azure Container Instance
       ↓
 Running Application
-``` id="aci1"
+``` 
 
 ---
 
@@ -281,7 +281,7 @@ Container App
 Microservices
    ↓
 Databases / APIs
-``` id="containerapp1"
+``` 
 
 ---
 
@@ -362,7 +362,7 @@ Container Image
 ACI / Azure Container Apps
         ↓
 Running Containerized Application
-``` id="containerflow1"
+```
 
 ---
 
