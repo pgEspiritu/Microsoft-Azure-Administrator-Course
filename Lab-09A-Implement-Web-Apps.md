@@ -42,6 +42,8 @@ In this task, you create an Azure web app. Azure App Services is a Platform As a
 
 3. Select **+ Create**, from drop-down menu, **Web App**. Notice the other choices.
 
+![Lab-10.1](images/Lab-10.1.png)
+
 4. On the **Basics** tab of the **Create Web App** blade, specify the following settings (leave others with their default values):
 
 | Setting | Value |
@@ -56,7 +58,12 @@ In this task, you create an Azure web app. Azure App Services is a Platform As a
 | Pricing plans | Premium V3 P1V3 |
 | Zone redundancy | accept the defaults |
 
+![Lab-10.2](images/Lab-10.2.png)
+![Lab-10.3](images/Lab-10.3.png)
+
 5. Click **Review + create**, and then **Create**.
+
+![Lab-10.4](images/Lab-10.4.png)
 
 > 📘 **Note:** Wait until the Web App is created before you proceed to the next task. This should take about a minute.
 
@@ -72,24 +79,37 @@ In this task, you will create a staging deployment slot. Deployment slots enable
 
 1. On the blade of the newly deployed Web App, click the **Default domain** link to display the default web page in a new browser tab.
 
+![Lab-10.5](images/Lab-10.5.png)
+c
+
 2. Close the new browser tab and, back in the Azure portal, in the **Deployment** section of the Web App blade, click **Deployment slots**.
 
 3. Click **Add slot**, and add a new slot with the following settings:
+
+![Lab-10.7](images/Lab-10.7.png)
 
 | Setting | Value |
 |---|---|
 | Name | staging |
 | Clone settings from | Do not clone settings |
 
+![Lab-10.8](images/Lab-10.8.png)
+
 4. Select **Add** to create the slot.
 
+![Lab-10.9](images/Lab-10.9.png)
+
 5. Refresh the page to view the **Production** and **Staging** slots.
+
+![Lab-10.10](images/Lab-10.10.png)
 
 6. Select the entry representing the newly created staging slot.
 
 > 📘 **Note:** This will open the blade displaying the properties of the staging slot.
 
 7. Review the staging slot blade and note that its URL differs from the one assigned to the production slot.
+
+![Lab-10.11](images/Lab-10.11.png)
 
 ---
 
@@ -117,11 +137,17 @@ master
 
 5. Select **Save**.
 
+![Lab-10.12](images/Lab-10.12.png)
+
 6. From the staging slot, select **Overview**.
 
 7. Select the **Default domain** link, and open the URL in a new tab.
 
+![Lab-10.13](images/Lab-10.13.png)
+
 8. Verify that the staging slot displays **Hello World**.
+
+![Lab-10.14](images/Lab-10.14.png)
 
 > 📘 **Note:** The deployment may take a minute. Be sure to Refresh the application page.
 
@@ -133,15 +159,25 @@ In this task, you will swap the staging slot with the production slot. Swapping 
 
 1. Navigate back to the **Deployment slots** blade, and then select **Swap**.
 
+![Lab-10.15](images/Lab-10.15.png)
+
 2. Review the default settings and click **Start Swap**. Wait for the notification that the swap has finished.
 
+![Lab-10.16](images/Lab-10.16.png)
+
 3. Return to the portal home page. You should have both the production web app and the staging slot.
+
+![Lab-10.17](images/Lab-10.17.png)
 
 4. Search for **App Services** and select your App Service web app. This returns you to the Production Deployment slot.
 
 5. Select the App Service web app and on the **Overview** blade of the Web App select the **Default domain** link to display the website home page.
 
+![Lab-10.18](images/Lab-10.18.png)
+
 6. Verify the production web page now displays the **Hello World!** page.
+
+![Lab-10.19](images/Lab-10.19.png)
 
 > 📘 **Note:** Copy the Default domain URL you will need it for load testing in the next task.
 
@@ -159,7 +195,7 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
 3. In the **Maximum burst** field, select **2**.
 
-📸 Screenshot of the autoscale page.
+![Lab-10.20](images/Lab-10.20.png)
 
 4. Select **Save**.
 
@@ -167,23 +203,40 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
 6. In the **Load Test your App** box, select **Create Load Test**.
 
+![Lab-10.21](images/Lab-10.21.png)
+
 7. Select **+ Create** and give your load test a name. The name must be unique.
 
+![Lab-10.22](images/Lab-10.22.png)
+![Lab-10.23](images/Lab-10.23.png)
+
 8. Select **Review + create** and then **Create**.
+
+![Lab-10.24](images/Lab-10.24.png)
 
 9. Wait for the load test to create, and then select **Go to resource**.
 
 10. From the **Overview | Create by adding HTTP requests**, select **Create**.
 
+![Lab-10.25](images/Lab-10.25.png)
+
 11. On the **Test plan** tab, click **Add request**. In the URL field, paste in your Default domain URL. Ensure this is properly formatted and begins with https://. Select **Add** to save your changes.
 
+![Lab-10.26](images/Lab-10.26.png)
+![Lab-10.27](images/Lab-10.27.png)
+
 12. Select **Review + create** and **Create**.
+
+![Lab-10.28](images/Lab-10.28.png)
 
 > 📘 **Note:** It may take a couple of minutes to create the test. Watch the notifications.
 
 13. Navigate to the test (it is listed on the home page).
 
 14. Refresh and review the live metrics including **Virtual users**, **Response time**, and **Requests/sec**.
+
+![Lab-10.29](images/Lab-10.29.png)
+![Lab-10.30](images/Lab-10.30.png)
 
 15. Select **Stop** to complete the test run. You don't need to wait for the test to complete.
 
