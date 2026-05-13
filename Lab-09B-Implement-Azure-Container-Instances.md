@@ -50,6 +50,8 @@ Navigate to the Azure portal:
 1. In the Azure portal, search for and select **Container instances**.
 2. On the **Container instances** blade, click **+ Create**.
 
+![Lab-11.1](images/Lab-11.1.png)
+
 ---
 
 ## ⚙️ Configure the Basics tab
@@ -65,6 +67,8 @@ On the **Basics** tab of the **Create container instance** blade, specify the fo
 | Image Source | Quickstart images |
 | Image | mcr.microsoft.com/azuredocs/aci-helloworld:latest (Linux) |
 
+![Lab-11.2](images/Lab-11.2.png)
+
 ---
 
 ## 🌐 Configure Networking
@@ -76,6 +80,8 @@ On the **Basics** tab of the **Create container instance** blade, specify the fo
 | Setting | Value |
 |---|---|
 | DNS name label | any valid, globally unique DNS host name |
+
+![Lab-11.3](images/Lab-11.3.png)
 
 📌 Note: Your container will be publicly reachable at:
 
@@ -95,6 +101,8 @@ dns-name-label.region.azurecontainer.io
 
 - ✅ Enable container instance logs
 
+![Lab-11.4](images/Lab-11.4.png)
+
 ---
 
 ## ⚡ Review Advanced settings
@@ -110,6 +118,8 @@ dns-name-label.region.azurecontainer.io
 1. Click **Review + Create**
 2. Ensure that the validation passed.
 3. Select **Create**
+
+![Lab-11.5](images/Lab-11.5.png)
 
 📌 Note: Wait for the deployment to complete. This should take 2–3 minutes.
 
@@ -137,15 +147,18 @@ In this task, you review the deployment of the container instance. By default, t
 |---|---|
 | Status | Running |
 
+![Lab-11.6](images/Lab-11.6.png)
+
 ---
 
 ## 🌍 Access the container instance webpage
 
 1. Copy the value of the container instance **FQDN**.
+
+![Lab-11.7](images/Lab-11.7.png)
+
 2. Open a new browser tab.
 3. Navigate to the corresponding URL.
-
-📌 Screenshot of the ACI overview page in the portal.
 
 ---
 
@@ -157,7 +170,12 @@ In this task, you review the deployment of the container instance. By default, t
 Welcome to Azure Container Instance
 ```
 
+![Lab-11.8](images/Lab-11.8.png)
+
 2. Refresh the page several times to create some log entries.
+
+![Lab-11.9](images/Lab-11.9.png)
+
 3. Close the browser tab.
 
 ---
