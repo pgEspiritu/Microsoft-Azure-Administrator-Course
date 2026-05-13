@@ -55,6 +55,8 @@ In the Azure portal, search for and select **Container Apps** and then, on the C
 
 Select **Container App**, from drop-down menu. Notice the other choices.
 
+![Lab-12.1](images/Lab-12.1.png)
+
 ---
 
 ### 🔹 Step 4: Configure Basics tab
@@ -69,17 +71,24 @@ On the **Basics** tab, use the following settings (leave others with their defau
 | Region | East US |
 | Container Apps Environment | Select Create new > Set Environment name to my-environment > Create |
 
+![Lab-12.2](images/Lab-12.2.png)
+
 ---
 
 ### 🔹 Step 5: Create Container Apps Environment
 
 Select **Create new** under Container Apps Environment.
 
+![Lab-12.3](images/Lab-12.3.png)
+
 Set:
 
 | Setting | Value |
 |---|---|
 | Environment name | my-environment |
+
+![Lab-12.4](images/Lab-12.4.png)
+![Lab-12.5](images/Lab-12.5.png)
 
 Select **Create**.
 
@@ -89,13 +98,19 @@ Select **Create**.
 
 Click **Next: Container tab** and ensure that **Use quickstart image** is checked. You may need to scroll up to view this setting.
 
+[Lab-12.6](images/Lab-12.6.png)
+
 Ensure **Quickstart image** is set to **Simple hello world container**. Notice the other choices.
+
+[Lab-12.7](images/Lab-12.7.png)
 
 ---
 
 ### 🔹 Step 7: Review and create
 
 Select **Review and create** and then **Create**.
+
+[Lab-12.9](images/Lab-12.9.png)
 
 ---
 
@@ -125,6 +140,8 @@ Select **Go to resource** to view your new container app.
 
 Select the link next to **Application URL** to view your application.
 
+[Lab-12.10](images/Lab-12.10.png)
+
 ---
 
 ### 🔹 Step 3: Verify application
@@ -132,6 +149,8 @@ Select the link next to **Application URL** to view your application.
 Verify you receive the message:
 
 **Your Azure Container Apps app is live**
+
+[Lab-12.11](images/Lab-12.11.png)
 
 ---
 
